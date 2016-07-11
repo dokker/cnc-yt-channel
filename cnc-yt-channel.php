@@ -32,3 +32,10 @@ $vendorAutoload = CNC_PROJECT_PATH . CNC_DS . 'vendor' . CNC_DS . 'autoload.php'
 if (is_file($vendorAutoload)) {
 	require_once($vendorAutoload);
 }
+
+function __cnc_yt_channel_load_plugin()
+{
+	$controller = new \cncYTC\Controller();
+}
+
+add_action('plugins_loaded', '__cnc_yt_channel_load_plugin');
