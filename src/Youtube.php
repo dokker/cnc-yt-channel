@@ -5,6 +5,11 @@
         private $apiKey;
 
         function __construct(){
+            $config = include_once(CNCNL_PROJECT_PATH . CNCNL_DS . 'config.php');
+            if ($config) {
+                $this->channelId = $config['channel_id'];
+                $this->apiKey = $config['api_key'];
+            }
         }
 
         /**
