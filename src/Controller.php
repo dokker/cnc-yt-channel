@@ -15,7 +15,7 @@ class Controller {
 	 */
 	public function registerScripts() {
 		if (true) {
-			wp_register_script('cnc-yt-channel-script', CNC_PROJECT_URL . CNC_DS . 'assets/js/script.js', array('jquery'));
+			wp_register_script('cnc-yt-channel-script', CNC_YTC_PROJECT_URL . CNC_YTC_DS . 'assets/js/script.js', array('jquery'));
 			wp_enqueue_script('cnc-yt-channel-script');
 		}
 	}

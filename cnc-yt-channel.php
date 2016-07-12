@@ -14,21 +14,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // load translations
-load_plugin_textdomain( 'cnc-yt-channel-newsletter', false, 'cnc-yt-channel/languages' );
+load_plugin_textdomain( 'cnc-yt-channel', false, 'cnc-yt-channel/languages' );
 
 /**
  * Initial settings
  */
-define('CNC_DS', DIRECTORY_SEPARATOR);
-define('CNC_PROJECT_PATH', realpath(dirname(__FILE__)));
-define('CNC_PROJECT_URL', plugins_url() . CNC_DS . 'cnc-yt-channel');
-define('CNC_TEMPLATE_DIR', CNC_PROJECT_PATH . CNC_DS . 'templates');
-define('CNC_THEME', get_stylesheet_directory());
+define('CNC_YTC_DS', DIRECTORY_SEPARATOR);
+define('CNC_YTC_PROJECT_PATH', realpath(dirname(__FILE__)));
+define('CNC_YTC_PROJECT_URL', plugins_url() . CNC_YTC_DS . 'cnc-yt-channel');
+define('CNC_YTC_TEMPLATE_DIR', CNC_YTC_PROJECT_PATH . CNC_YTC_DS . 'templates');
+define('CNC_YTC_THEME', get_stylesheet_directory());
 
 /**
  * Autoload
  */
-$vendorAutoload = CNC_PROJECT_PATH . CNC_DS . 'vendor' . CNC_DS . 'autoload.php';
+$vendorAutoload = CNC_YTC_PROJECT_PATH . CNC_YTC_DS . 'vendor' . CNC_YTC_DS . 'autoload.php';
 if (is_file($vendorAutoload)) {
 	require_once($vendorAutoload);
 }
