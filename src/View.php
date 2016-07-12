@@ -7,7 +7,6 @@ class View {
 
 	function __construct()
 	{
-		add_shortcode('cnc_yt_channel', [$this, 'shortcodeChannelPlayer']);
 	}
 
 	/**
@@ -48,20 +47,5 @@ class View {
 	  if (strlen($string) > $length)
 	     $string = mb_substr($string, 0, $length-3) . $replacer;
 	  return $string;
-	}
-
-	/**
-	 * Generate channel player shortcode
-	 * @param  array $args Given attributes
-	 */
-	public function shortcodeChannelPlayer($args)
-	{
-	    // extract the attributes into variables
-	    $atts = shortcode_atts(array(
-	        'num' => -1,
-	    ), $args);
-
-	    $this->assign('', $events);
-	    return $this->render('');
 	}
 }

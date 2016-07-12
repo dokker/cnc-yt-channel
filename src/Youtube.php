@@ -42,7 +42,6 @@
          */
         function getEntries(){
             $url = 'https://www.googleapis.com/youtube/v3/search?key='.$this->apiKey.'&channelId='.$this->channelId.'&part=snippet,id&order=date&maxResults=50';
-
             $ch = curl_init();
 
             curl_setopt($ch, CURLOPT_URL, $url);
