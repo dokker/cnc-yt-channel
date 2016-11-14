@@ -4,6 +4,7 @@ namespace cncYTC;
 class Controller {
 	private $view;
 	private $player_template;
+	private $yt_url;
 
 	function __construct () {
 		$this->view = new \cncYTC\View();
@@ -14,6 +15,7 @@ class Controller {
         $config = include(CNC_YTC_PROJECT_PATH . CNC_YTC_DS . 'config.php');
         if ($config) {
             $this->player_template = $config['player_template'];
+            $this->yt_url = $config['youtube_url'];
         }
 	}
 
@@ -50,6 +52,7 @@ class Controller {
 	    $this->yt = new \cncYTC\Youtube();
 	    $this->view->assign('video_featured', $this->yt->getFeaturedHTML(''));
 	    $this->view->assign('video_list', $this->yt->getHTML($atts['num']));
+	    $this->view->assign('yt_url', $this->yt_url);
 	    return $this->view->render($this->player_template);
 	}
 }

@@ -5,7 +5,7 @@
   </div>
   <div class="mk-col-4-12">
     <?php echo $video_list; ?>
-    <a class="more-yt-videos" href="https://www.youtube.com/user/TransparencyHU" target="_blank">
+    <a class="more-yt-videos" href="<?php echo $yt_url; ?>" target="_blank">
       <?php _e('More', 'cnc-yt-channel'); ?></a>
   </div>
 </div>
